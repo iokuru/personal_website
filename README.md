@@ -1,32 +1,55 @@
 # personal website
 
-my personal site. vanilla html, css, and a bit of js. no frameworks, no build step.
+Portfolio and engineering notes built with Astro.
 
-live at [iokuru.github.io/personal_website](https://iokuru.github.io/personal_website) (wip)
+Live: [krishnakatiyar.netlify.app](https://krishnakatiyar.netlify.app/)
 
-## structure
+## Structure
 
 ```
-src/
-  css/
-    base.css        variables, reset, body
-    layout.css      shell, sidebar, nav
-    cards.css       project cards, featured card
-    stats.css       stats strip
-    blogs.css       blogs page
-  js/
-    namecycler.js   multilingual name animation
 public/
   fonts/
     SundayInspiredScript.otf
-index.html
-blogs.html
+src/
+  components/
+    Card.astro
+    Footer.astro
+    Sidebar.astro
+    StatsBar.astro
+  layouts/
+    Base.astro
+  pages/
+    index.astro
+    blogs.astro
+  scripts/
+    namecycler.js
+  styles/
+    base.css
+    blogs.css
+    cards.css
+    layout.css
+    stats.css
+astro.config.mjs
+netlify.toml
+package.json
+tsconfig.json
 ```
 
-## stack
+## Stack
 
-just html, css, and vanilla js. the name cycles through 12 languages because why not.
+- [Astro](https://astro.build/)
+- Vanilla CSS with CSS custom properties
+- Zero heavy client-side runtime dependencies
 
-## running locally
+## Development
 
-open index.html in a browser. thats literally it.
+```bash
+npm install
+npm run dev
+```
+
+## Build
+
+```bash
+npm run build
+```
