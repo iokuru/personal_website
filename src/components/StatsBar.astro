@@ -1,0 +1,18 @@
+---
+export interface Props {
+  items: { value: string; label: string }[];
+}
+
+const { items } = Astro.props;
+---
+
+<section class="stats" aria-label="Highlights">
+  {
+    items.map((item) => (
+      <div>
+        <strong>{item.value}</strong>
+        <span set:html={item.label} />
+      </div>
+    ))
+  }
+</section>

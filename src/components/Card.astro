@@ -1,0 +1,35 @@
+---
+export interface Props {
+  title: string;
+  status: string;
+  domain: string;
+  desc: string;
+  tags: string;
+  href: string;
+  featured?: boolean;
+}
+
+const { title, status, domain, desc, tags, href, featured = false } = Astro.props;
+const isExternal = href.startsWith("http");
+---
+
+<article class={`card${featured ? " featured" : ""}`}>
+  <div class="card-top">
+    <time>{status}</time>
+    <span class="pill">{domain}</span>
+  </div>
+  <h3>{title}</h3>
+  <p>{desc}</p>
+  <div class="card-footer">
+    <span>{tags}</span>
+    {
+      isExternal ? (
+        <a href={href} target="_blank" rel="noopener noreferrer">
+          Explore &#8599;
+        </a>
+      ) : (
+        <a href={href}>Explore &rarr;</a>
+      )
+    }
+  </div>
+</article>

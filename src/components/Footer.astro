@@ -1,0 +1,24 @@
+---
+export interface Props {
+  kicker?: string;
+  heading?: string;
+  email?: string;
+  meta?: string;
+}
+
+const {
+  kicker = "LET'S BUILD WHAT'S NEXT",
+  heading = "Have a hard problem<br>worth solving?",
+  email = "krishnakatiyar108@gmail.com",
+  meta = "VIT Chennai &middot; B.Tech CSE, AI &amp; Robotics &middot; 2024&mdash;2028",
+} = Astro.props;
+---
+
+<footer class="site-footer" id="contact">
+  <p class="footer-kicker">{kicker}</p>
+  <h2 set:html={heading} />
+  <a class="contact-link" href={`mailto:${email}`}>
+    {email} <span>&#8599;</span>
+  </a>
+  <p class="footer-meta" set:html={meta} />
+</footer>

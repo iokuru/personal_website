@@ -1,0 +1,37 @@
+---
+export interface Props {
+  activePage: "home" | "blogs" | "now";
+}
+
+const { activePage } = Astro.props;
+---
+
+<aside class="sidebar">
+  <div class="side-inner">
+    <div class="brand-cycler" id="brandCycler" aria-label="Krishna name">
+      <div
+        class="name-display"
+        id="nameDisplay"
+        style="font-family: 'Sunday Inspired', cursive; font-size: 58px; font-weight: 400;"
+      >
+        Krishna
+      </div>
+    </div>
+
+    <p class="tagline">Building things just<br />to see if I can.</p>
+
+    <nav class="side-nav" aria-label="Main navigation">
+      <a href="/" class={activePage === "home" ? "active" : ""}>HOME</a>
+      <a href="/blogs" class={activePage === "blogs" ? "active" : ""}>BLOGS</a>
+      <a href="/#now" class={activePage === "now" ? "active" : ""}>NOW</a>
+    </nav>
+
+    <div class="socials">
+      <a href="https://github.com/iokuru" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="mailto:krishnakatiyar108@gmail.com">Mail</a>
+      <a href="https://www.linkedin.com/in/krishna-katiyaar" target="_blank" rel="noopener noreferrer">in</a>
+    </div>
+  </div>
+</aside>
+
+<script src="../scripts/namecycler.js"></script>
