@@ -1,4 +1,18 @@
+# build output
+dist/
+.astro/
+
+# dependencies
 node_modules/
-.DS_Store
-.env
+
+# logs and environment
 *.log
+.env
+.env.*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# local working copies
+yes-in-that-case-design-the/
