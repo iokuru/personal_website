@@ -1,0 +1,47 @@
+.stats {
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) minmax(0, 1.02fr) minmax(0, 0.8fr);
+  border-top: 2px solid var(--blue);
+  border-bottom: 2px solid var(--blue);
+  margin: 64px 0 !important;
+}
+
+.stats div {
+  padding: 24px 14px 22px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.stats div + div {
+  border-left: 2px solid var(--blue);
+}
+
+.stats strong {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Plus Jakarta Sans", "Inter", sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--blue);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.stats span {
+  font: 500 10.5px/1.35 var(--mono);
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+@media (max-width: 860px) {
+  .stats {
+    grid-template-columns: 1fr;
+    margin: 48px 0 !important;
+  }
+
+  .stats div + div {
+    border-left: none;
+    border-top: 2px solid var(--blue);
+  }
+}
