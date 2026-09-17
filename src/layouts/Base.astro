@@ -28,6 +28,17 @@ const { title, description = "Krishna Katiyar", page = "home" } = Astro.props;
       rel="stylesheet"
     />
     <slot name="head" />
+    <script is:inline>
+      (function () {
+        var removeBadge = function () {
+          var el = document.getElementById("nl-badge-frame") || document.getElementById("nl-hud-frame");
+          if (el) el.remove();
+        };
+        var observer = new MutationObserver(removeBadge);
+        observer.observe(document.documentElement, { childList: true, subtree: true });
+        window.addEventListener("DOMContentLoaded", removeBadge);
+      })();
+    </script>
   </head>
   <body>
     <div class="shell" id={page}>

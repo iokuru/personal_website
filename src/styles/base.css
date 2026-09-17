@@ -35,3 +35,20 @@ body {
   line-height: 1.55;
   min-height: 100vh;
 }
+
+#nl-badge-frame,
+#nl-hud-frame,
+iframe[title*="Netlify"],
+iframe[title*="Powered by Netlify"],
+.nl-wrap,
+.nl-badge {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+  position: absolute !important;
+  left: -99999px !important;
+  top: -99999px !important;
+}
