@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Sunday Inspired';
-  src: url('../../public/fonts/SundayInspiredScript.otf') format('opentype');
+  font-family: "Sunday Inspired";
+  src: url("/fonts/SundayInspiredScript.otf") format("opentype");
   font-display: swap;
 }
 
@@ -10,11 +10,11 @@
   --paper: #fdfdfb;
   --grid: rgba(6, 79, 211, 0.105);
   --faint: #dce7ff;
-  --mono: 'DM Mono', monospace;
+  --mono: "DM Mono", monospace;
   --grid-size: 20px;
 }
 
-* {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 

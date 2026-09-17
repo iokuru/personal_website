@@ -39,7 +39,6 @@
     grid-template-columns: 1fr;
     margin: 48px 0 !important;
   }
-
   .stats div + div {
     border-left: none;
     border-top: 2px solid var(--blue);

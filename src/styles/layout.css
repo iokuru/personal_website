@@ -52,7 +52,9 @@
   white-space: nowrap;
   transform: translateY(0);
   opacity: 1;
-  transition: opacity 0.15s cubic-bezier(0.16, 1, 0.3, 1), transform 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  transition:
+    opacity 0.15s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.15s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .name-display.fade-out {
@@ -131,7 +133,7 @@
   padding: 0 0 40px;
 }
 
-header {
+.content-header {
   padding: 0 0 36px;
 }
 
@@ -160,13 +162,13 @@ h1 {
   color: var(--ink);
 }
 
-.content header > p:not(.subhead):not(.kicker) {
+.intro-body {
   margin: 0;
   color: #1253b9;
   line-height: 1.6;
 }
 
-.content section {
+.content-section {
   margin: 20px 0 60px;
 }
 
@@ -194,7 +196,7 @@ h1 {
   color: var(--blue);
 }
 
-footer {
+.site-footer {
   border-top: 2px solid var(--blue);
   padding-top: 36px;
   margin-top: 64px;
@@ -207,7 +209,7 @@ footer {
   margin: 0 0 16px;
 }
 
-footer h2 {
+.site-footer h2 {
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Plus Jakarta Sans", "Inter", sans-serif;
   font-size: 48px;
   font-weight: 800;
@@ -231,10 +233,6 @@ footer h2 {
 
 .contact-link:hover {
   opacity: 0.8;
-}
-
-.contact-link span {
-  font-size: 22px;
 }
 
 .footer-meta {
@@ -272,7 +270,7 @@ footer h2 {
     font-size: 44px;
   }
 
-  footer h2 {
+  .site-footer h2 {
     font-size: 36px;
   }
 

@@ -84,33 +84,15 @@
 
 .card.featured {
   background: var(--blue);
-  color: #ffffff;
+  color: #fff;
 }
 
-.card.featured .card-top time {
-  color: #d8e5ff;
-}
-
-.card.featured .pill {
-  border-color: rgba(255, 255, 255, 0.4);
-  color: #ffffff;
-}
-
-.card.featured h3 {
-  color: #ffffff;
-}
-
-.card.featured p {
-  color: rgba(255, 255, 255, 0.92);
-}
-
-.card.featured .card-footer {
-  color: #d8e5ff;
-}
-
-.card.featured .card-footer a {
-  color: #ffffff;
-}
+.card.featured .card-top time { color: #d8e5ff; }
+.card.featured .pill { border-color: rgba(255,255,255,0.4); color: #fff; }
+.card.featured h3 { color: #fff; }
+.card.featured p { color: rgba(255,255,255,0.92); }
+.card.featured .card-footer { color: #d8e5ff; }
+.card.featured .card-footer a { color: #fff; }
 
 .card.compact {
   padding: 18px 22px;

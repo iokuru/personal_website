@@ -1,8 +1,8 @@
-.posts-page-header {
+.blogs-header {
   margin-bottom: 36px;
 }
 
-.posts-title {
+.blogs-title {
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Plus Jakarta Sans", "Inter", sans-serif;
   font-size: 56px;
   font-weight: 900;
@@ -48,7 +48,6 @@
 .post-meta-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 12px;
 }
 
@@ -59,8 +58,7 @@
   letter-spacing: 0.05em;
 }
 
-.post-item h2,
-.post-item .post-title {
+.post-item h2 {
   font-size: 26px;
   font-weight: 700;
   color: var(--blue);
