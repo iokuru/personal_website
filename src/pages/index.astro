@@ -1,0 +1,117 @@
+---
+import Base from "../layouts/Base.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Card from "../components/Card.astro";
+import StatsBar from "../components/StatsBar.astro";
+import Footer from "../components/Footer.astro";
+
+const works = [
+  {
+    title: "GUARDIAN",
+    status: "ONGOING",
+    domain: "AI / APPSEC",
+    desc: "Deterministic policy enforcement and semantic risk classification using Sentence Transformers, with FastAPI RBAC services, PostgreSQL persistence, audit logging, and a React/TypeScript control plane.",
+    tags: "FASTAPI \u00b7 SENTENCE TRANSFORMERS \u00b7 POSTGRESQL \u00b7 REACT / TYPESCRIPT",
+    href: "https://github.com/iokuru/guardian",
+    featured: true,
+  },
+  {
+    title: "AlzheimerTrajectoryNet",
+    status: "PRODUCTION READY",
+    domain: "AI / HEALTH",
+    desc: "Longitudinal MRI trajectory prediction using 96\u00d796\u00d796 imaging tensors, with preprocessing, augmentation, class-imbalance handling, macro F1 evaluation, and confusion-matrix analysis.",
+    tags: "PYTORCH \u00b7 OPENCV \u00b7 DEEP LEARNING",
+    href: "https://github.com/iokuru/alzheimer_trajectory_net",
+    featured: false,
+  },
+  {
+    title: "ThermoPilot \u2014 Predictive HVAC Optimization",
+    status: "AI SYSTEMS",
+    domain: "AI / ENERGY SYSTEMS",
+    desc: "AI and Model Predictive Control for HVAC scheduling under changing weather and pricing conditions, designed to reduce energy use without sacrificing thermal comfort.",
+    tags: "FORECASTING \u00b7 MPC \u00b7 OPTIMIZATION",
+    href: "#contact",
+    featured: false,
+  },
+  {
+    title: "Railway Section Throughput Optimizer",
+    status: "SYSTEMS RESEARCH",
+    domain: "SIMULATION / OPERATIONS",
+    desc: "Simulation-based scheduling across a 92 km railway section with conflict detection, headway constraints, platform limits, congestion metrics, and adaptive routing.",
+    tags: "ALGORITHMS \u00b7 SIMULATION \u00b7 OPTIMIZATION",
+    href: "https://github.com/Team-Tracktion/section-throughput-optimiser",
+    featured: false,
+  },
+];
+
+const stats = [
+  { value: "1100+", label: "episodes of One Piece<br>endured and still going" },
+  { value: "50+",   label: "half-finished side projects<br>abandoned in local repos" },
+  { value: "7.8",   label: "CGPA with 1 canon<br>event survived" },
+];
+
+const now = [
+  {
+    year: "2026",
+    title: "Disentangling biomarkers for early Alzheimer\u2019s detection",
+    body: "Designing a multimodal EEG-fNIRS deep learning framework that separates cognitive and emotional biomarkers through beta-VAE disentanglement and cross-modal representation learning.",
+  },
+  {
+    year: "2026",
+    title: "Queue-aware LLM-assisted unit commitment",
+    body: "Researching uncertainty refinement and flexible-demand queueing for renewable-rich power systems.",
+  },
+  {
+    year: "2025",
+    title: "Winner \u2014 Makeathon 2025",
+    body: "Led AI model development using CodeT5 and CodeBERT for real-time code analysis and optimization.",
+  },
+];
+---
+
+<Base title="Krishna Katiyar" description="Krishna Katiyar \u2014 building things just to see if I can." page="home">
+  <Sidebar activePage="home" />
+
+  <main class="content">
+    <header class="content-header">
+      <p class="kicker">AI / ROBOTICS / SYSTEMS</p>
+      <h1>KRISHNA KATIYAR</h1>
+      <p class="subhead">
+        I build intelligent systems at the intersection of AI, robotics, and real-world infrastructure.
+      </p>
+      <p class="intro-body">
+        Computer Science undergraduate at VIT Chennai working across machine learning, computer vision, backend
+        systems, and embedded IoT. I enjoy taking a difficult, messy problem and turning it into something useful,
+        explainable, and practical.
+      </p>
+    </header>
+
+    <section id="work" class="content-section">
+      <div class="section-heading">
+        <h2>SELECTED WORKS</h2>
+        <span>01&mdash;04</span>
+      </div>
+      {works.map((w) => <Card {...w} />)}
+    </section>
+
+    <StatsBar items={stats} />
+
+    <section id="now" class="content-section">
+      <div class="section-heading">
+        <h2>NOW</h2>
+        <span>FIELD NOTES</span>
+      </div>
+      {
+        now.map((n) => (
+          <article class="card compact">
+            <time>{n.year}</time>
+            <h3>{n.title}</h3>
+            <p>{n.body}</p>
+          </article>
+        ))
+      }
+    </section>
+
+    <Footer />
+  </main>
+</Base>

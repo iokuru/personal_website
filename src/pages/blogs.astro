@@ -1,0 +1,33 @@
+---
+import Base from "../layouts/Base.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Base title="Blogs | Krishna Katiyar" description="Krishna Katiyar - Blogs, writing, and engineering notes." page="blogs">
+  <Sidebar activePage="blogs" />
+
+  <main class="content">
+    <header class="blogs-header">
+      <p class="kicker">WRITING / NOTES / THOUGHTS</p>
+      <h1 class="blogs-title">BLOGS</h1>
+      <p class="subhead">Explorations in artificial intelligence, robotics architectures, and engineering practical systems.</p>
+    </header>
+
+    <ul class="post-list">
+      <li class="post-item empty-state">
+        <div class="post-meta-row">
+          <time class="post-date">IN THE KITCHEN</time>
+        </div>
+        <h2>Something is cooking...</h2>
+        <p>Technical deep-dives, research breakdowns, and engineering field notes are currently on the stove. Articles and project writeups will be published here soon.</p>
+        <div class="post-item-footer">
+          <span>STAY TUNED</span>
+          <a href="/">&larr; Explore Selected Works</a>
+        </div>
+      </li>
+    </ul>
+
+    <Footer />
+  </main>
+</Base>
