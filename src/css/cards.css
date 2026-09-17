@@ -1,0 +1,135 @@
+.card {
+  position: relative;
+  border: 3px solid var(--blue);
+  border-radius: 20px;
+  padding: 20px 22px 18px;
+  margin: 0 0 16px;
+  background: rgba(253, 253, 251, 0.7);
+  backdrop-filter: blur(4px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translate(4px, -4px);
+  box-shadow: -4px 4px 0 var(--blue);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.card-top time {
+  font: 500 11px/1 var(--mono);
+  letter-spacing: 0.06em;
+  color: var(--blue);
+  margin: 0;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid var(--blue);
+  border-radius: 999px;
+  padding: 3px 9px;
+  font: 500 10px/1 var(--mono);
+  letter-spacing: 0.04em;
+  color: var(--blue);
+}
+
+.card h3 {
+  margin: 0 0 10px;
+  color: var(--blue);
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.card p {
+  margin: 0;
+  color: #1253b9;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 18px;
+  font: 500 11px var(--mono);
+  letter-spacing: 0.04em;
+  color: #4c7bd3;
+}
+
+.card-footer a {
+  color: var(--blue);
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: transform 0.15s ease;
+}
+
+.card-footer a:hover {
+  transform: translateX(3px);
+}
+
+.card.featured {
+  background: var(--blue);
+  color: #ffffff;
+}
+
+.card.featured .card-top time {
+  color: #d8e5ff;
+}
+
+.card.featured .pill {
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+}
+
+.card.featured h3 {
+  color: #ffffff;
+}
+
+.card.featured p {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.card.featured .card-footer {
+  color: #d8e5ff;
+}
+
+.card.featured .card-footer a {
+  color: #ffffff;
+}
+
+.card.compact {
+  padding: 18px 22px;
+}
+
+.card.compact time {
+  font: 500 11px/1 var(--mono);
+  letter-spacing: 0.05em;
+  color: var(--blue);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.card.compact h3 {
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+
+.card.compact p {
+  font-size: 14px;
+  line-height: 1.5;
+}
