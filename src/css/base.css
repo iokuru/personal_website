@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'Sunday Inspired';
+  src: url('../../public/fonts/SundayInspiredScript.otf') format('opentype');
+  font-display: swap;
+}
+
+:root {
+  --blue: #064fd3;
+  --ink: #0647bc;
+  --paper: #fdfdfb;
+  --grid: rgba(6, 79, 211, 0.105);
+  --faint: #dce7ff;
+  --mono: 'DM Mono', monospace;
+  --grid-size: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: var(--grid-size) var(--grid-size);
+  color: var(--ink);
+  font-family: Inter, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  min-height: 100vh;
+}
